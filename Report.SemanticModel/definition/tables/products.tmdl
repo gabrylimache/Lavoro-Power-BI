@@ -1,0 +1,97 @@
+table products
+	lineageTag: a2ce22b9-90be-4c2b-82da-c8b4b0992739
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		lineageTag: 2044902a-a9a8-4e35-82dd-0507ba0d55ea
+		summarizeBy: count
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductName
+		dataType: string
+		lineageTag: d60d683c-41e7-438a-9f7f-201e04f14b79
+		summarizeBy: none
+		sourceColumn: ProductName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Price
+		dataType: int64
+		formatString: 0
+		lineageTag: 0a02a09a-e08b-48b2-8d6f-02ed8dce95b1
+		summarizeBy: sum
+		sourceColumn: Price
+
+		annotation SummarizationSetBy = Automatic
+
+	column CategoryID
+		dataType: int64
+		formatString: 0
+		lineageTag: 5b3fc437-b4dc-45e4-8c5e-bc87105a0e64
+		summarizeBy: none
+		sourceColumn: CategoryID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Class
+		dataType: string
+		lineageTag: 77ee61bb-08fb-4e3f-9ae7-bfb09bbdf7a3
+		summarizeBy: none
+		sourceColumn: Class
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifyDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5148f460-1e0c-4542-833b-6fbdbfc22f6c
+		summarizeBy: none
+		sourceColumn: ModifyDate
+
+		variation Variation
+			isDefault
+			relationship: 45b8b870-576c-4af2-b932-c6fbec29ba52
+			defaultHierarchy: LocalDateTable_2dc02733-b3cb-43a0-a84b-e2bc06a1de9e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Resistant
+		dataType: string
+		lineageTag: 89593f74-2054-4400-a79f-09aea33b03a7
+		summarizeBy: none
+		sourceColumn: Resistant
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsAllergic
+		dataType: string
+		lineageTag: d6ac8781-a8dd-4d09-8ee1-5ded06a45325
+		summarizeBy: none
+		sourceColumn: IsAllergic
+
+		annotation SummarizationSetBy = Automatic
+
+	column VitalityDays
+		dataType: int64
+		formatString: 0
+		lineageTag: fe86baf5-66fa-4002-9161-cfd60685ac22
+		summarizeBy: sum
+		sourceColumn: VitalityDays
+
+		annotation SummarizationSetBy = Automatic
+
+	partition products = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\ValentinoStarace\OneDrive - ITS Tech Talent Factory\Desktop\PowerBi\Laboratorio\Lavoro-Power-BI\products.csv"),[Delimiter=",", Columns=9, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ProductID", Int64.Type}, {"ProductName", type text}, {"Price", Int64.Type}, {"CategoryID", Int64.Type}, {"Class", type text}, {"ModifyDate", type datetime}, {"Resistant", type text}, {"IsAllergic", type text}, {"VitalityDays", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

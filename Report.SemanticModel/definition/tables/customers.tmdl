@@ -1,0 +1,65 @@
+table customers
+	lineageTag: 97d11655-ac71-407b-938a-04b1f01bda3d
+
+	column CustomerID
+		dataType: int64
+		formatString: 0
+		lineageTag: aab7243d-80a4-48ac-8e4f-db6b5b9a0209
+		summarizeBy: count
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FirstName
+		dataType: string
+		lineageTag: 24ae3e0d-c2e3-49e1-a189-3fe075e2acab
+		summarizeBy: none
+		sourceColumn: FirstName
+
+		annotation SummarizationSetBy = Automatic
+
+	column MiddleInitial
+		dataType: string
+		lineageTag: b1c42d80-6814-44a3-b65a-48831a52c112
+		summarizeBy: none
+		sourceColumn: MiddleInitial
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastName
+		dataType: string
+		lineageTag: 69237b1e-83ef-40ee-80f5-5037b7ed8370
+		summarizeBy: none
+		sourceColumn: LastName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CityID
+		dataType: int64
+		formatString: 0
+		lineageTag: 91adf43a-4a5d-46e3-8bfc-37b2732afa2b
+		summarizeBy: none
+		sourceColumn: CityID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Address
+		dataType: string
+		lineageTag: b298be0f-cd63-4b94-a397-85514c5ee296
+		summarizeBy: none
+		sourceColumn: Address
+
+		annotation SummarizationSetBy = Automatic
+
+	partition customers = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\ValentinoStarace\OneDrive - ITS Tech Talent Factory\Desktop\PowerBi\Laboratorio\Lavoro-Power-BI\customers.csv"),[Delimiter=",", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"CustomerID", Int64.Type}, {"FirstName", type text}, {"MiddleInitial", type text}, {"LastName", type text}, {"CityID", Int64.Type}, {"Address", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

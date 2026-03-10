@@ -1,0 +1,95 @@
+table employees
+	lineageTag: e0904f01-8e08-4337-98ce-cac7106f0b71
+
+	column EmployeeID
+		dataType: int64
+		formatString: 0
+		lineageTag: 93376cef-b1e6-4bf8-99db-030ff9bb71f5
+		summarizeBy: count
+		sourceColumn: EmployeeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FirstName
+		dataType: string
+		lineageTag: ecc65ad5-2289-4abd-80e1-949e9300e96a
+		summarizeBy: none
+		sourceColumn: FirstName
+
+		annotation SummarizationSetBy = Automatic
+
+	column MiddleInitial
+		dataType: string
+		lineageTag: a9f97f5a-144c-4da3-b074-16c0e4af1b4e
+		summarizeBy: none
+		sourceColumn: MiddleInitial
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastName
+		dataType: string
+		lineageTag: 5098fe6b-e9ba-4bd3-ba1f-9d213d74ae0d
+		summarizeBy: none
+		sourceColumn: LastName
+
+		annotation SummarizationSetBy = Automatic
+
+	column BirthDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2c674bd4-5a89-4036-bc85-24aa130fc980
+		summarizeBy: none
+		sourceColumn: BirthDate
+
+		variation Variation
+			isDefault
+			relationship: 777875be-5ab8-4eca-ac5c-5c11a6815983
+			defaultHierarchy: LocalDateTable_8da7d5c7-f9f4-460b-aafe-da38ecc84301.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: string
+		lineageTag: dfd6c353-4e01-4068-a41e-624fab8ed027
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column CityID
+		dataType: int64
+		formatString: 0
+		lineageTag: e324b4b8-2db2-423f-8273-d1cf5bfda063
+		summarizeBy: none
+		sourceColumn: CityID
+
+		annotation SummarizationSetBy = Automatic
+
+	column HireDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2f42049e-c3cc-45ce-969a-31a2845aa18a
+		summarizeBy: none
+		sourceColumn: HireDate
+
+		variation Variation
+			isDefault
+			relationship: 00ee799c-4f18-4f69-97ae-644e1ad2a904
+			defaultHierarchy: LocalDateTable_f915beb9-4f60-4f21-993f-e0eb5ce85562.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition employees = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\ValentinoStarace\OneDrive - ITS Tech Talent Factory\Desktop\PowerBi\Laboratorio\Lavoro-Power-BI\employees.csv"),[Delimiter=",", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"EmployeeID", Int64.Type}, {"FirstName", type text}, {"MiddleInitial", type text}, {"LastName", type text}, {"BirthDate", type datetime}, {"Gender", type text}, {"CityID", Int64.Type}, {"HireDate", type datetime}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
