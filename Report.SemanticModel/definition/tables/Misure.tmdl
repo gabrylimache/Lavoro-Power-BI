@@ -1,0 +1,32 @@
+table Misure
+	lineageTag: 60049237-726c-4a2f-ab3c-0aa2a6fc5d81
+
+	measure NumberOfEmployers = SUM(employees[EmployeeID])
+		formatString: 0
+		lineageTag: a73ffc3e-374f-4fe3-ab49-de06edd76405
+
+	measure NumberOfMen = CALCULATE([NumberOfEmployers], employees[Gender] = "M")
+		formatString: 0
+		lineageTag: 69aced9e-70b3-41fc-95a9-6ed56f118cce
+
+	measure NumberOfWomen = CALCULATE([NumberOfEmployers], employees[Gender] = "F")
+		formatString: 0
+		lineageTag: 89e14c91-8972-49ba-b13c-f414d8e8469a
+
+	column Column
+		formatString: 0
+		lineageTag: 8133fa13-d3c8-4722-8244-95cadae6146d
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Misure = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 5e4892ab1b8640b99de7eb99cfee1772
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+
