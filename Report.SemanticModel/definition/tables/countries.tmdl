@@ -1,0 +1,40 @@
+table countries
+	lineageTag: bd063e0f-dd37-46b1-94d5-411040cd2a7a
+
+	column CountryID
+		dataType: int64
+		formatString: 0
+		lineageTag: 84a0c8ce-7bef-43c4-99cd-d918cf86d977
+		summarizeBy: none
+		sourceColumn: CountryID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryName
+		dataType: string
+		lineageTag: 14dad936-85af-460a-bf30-45dd896c9c53
+		summarizeBy: none
+		sourceColumn: CountryName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryCode
+		dataType: string
+		lineageTag: 10f19c45-a4c8-410d-ac8c-b1a388e385ff
+		summarizeBy: none
+		sourceColumn: CountryCode
+
+		annotation SummarizationSetBy = Automatic
+
+	partition countries = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\ValentinoStarace\OneDrive - ITS Tech Talent Factory\Desktop\PowerBi\Laboratorio\Lavoro-Power-BI\countries.csv"),[Delimiter=",", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"CountryID", Int64.Type}, {"CountryName", type text}, {"CountryCode", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
