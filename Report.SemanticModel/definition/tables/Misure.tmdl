@@ -1,0 +1,24 @@
+table Misure
+	lineageTag: b3588fd7-7f0c-4a79-b368-a20bf07a0d8c
+
+	measure TotCustomers = DISTINCTCOUNT(customers[CustomerID])
+		formatString: 0
+		lineageTag: 0fdf839b-1224-4447-a043-bfefbbb8e357
+
+	column Column
+		formatString: 0
+		lineageTag: 574c43e2-db29-43dc-995b-918ca68e9754
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Misure = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 4ff283e066974a919e247c39e0c5aba9
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+
