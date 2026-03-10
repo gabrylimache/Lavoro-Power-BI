@@ -22,6 +22,7 @@ ref table LocalDateTable_8da7d5c7-f9f4-460b-aafe-da38ecc84301
 ref table LocalDateTable_f915beb9-4f60-4f21-993f-e0eb5ce85562
 ref table products
 ref table LocalDateTable_2dc02733-b3cb-43a0-a84b-e2bc06a1de9e
+ref table Misure
 
 ref cultureInfo en-US
 
