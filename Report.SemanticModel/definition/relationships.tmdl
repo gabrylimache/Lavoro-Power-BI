@@ -1,0 +1,31 @@
+relationship AutoDetected_a7dab300-719f-4926-a7a9-f4322ce0a883
+	fromColumn: cities.CountryID
+	toColumn: countries.CountryID
+
+relationship AutoDetected_7dc97976-d224-41db-a43d-f6f9be3269fc
+	fromColumn: customers.CityID
+	toColumn: cities.CityID
+
+relationship 777875be-5ab8-4eca-ac5c-5c11a6815983
+	joinOnDateBehavior: datePartOnly
+	fromColumn: employees.BirthDate
+	toColumn: LocalDateTable_8da7d5c7-f9f4-460b-aafe-da38ecc84301.Date
+
+relationship 00ee799c-4f18-4f69-97ae-644e1ad2a904
+	joinOnDateBehavior: datePartOnly
+	fromColumn: employees.HireDate
+	toColumn: LocalDateTable_f915beb9-4f60-4f21-993f-e0eb5ce85562.Date
+
+relationship AutoDetected_5b2365bd-7896-4ec5-824a-dd7878fca6f6
+	fromColumn: employees.CityID
+	toColumn: cities.CityID
+
+relationship 45b8b870-576c-4af2-b932-c6fbec29ba52
+	joinOnDateBehavior: datePartOnly
+	fromColumn: products.ModifyDate
+	toColumn: LocalDateTable_2dc02733-b3cb-43a0-a84b-e2bc06a1de9e.Date
+
+relationship AutoDetected_116546d9-e0dc-49c5-87ed-535a009b522a
+	fromColumn: products.CategoryID
+	toColumn: categories.CategoryID
+

@@ -1,0 +1,28 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: it-IT
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["categories","cities","countries","customers","employees","products"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table categories
+ref table cities
+ref table countries
+ref table customers
+ref table employees
+ref table DateTableTemplate_fe980937-95d2-464e-ab86-9e3f798fefde
+ref table LocalDateTable_8da7d5c7-f9f4-460b-aafe-da38ecc84301
+ref table LocalDateTable_f915beb9-4f60-4f21-993f-e0eb5ce85562
+ref table products
+ref table LocalDateTable_2dc02733-b3cb-43a0-a84b-e2bc06a1de9e
+ref table Misure
+
+ref cultureInfo en-US
+

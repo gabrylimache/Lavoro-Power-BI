@@ -1,0 +1,130 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "e068c5630cc03d8d8ad2",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 153.68833648804838,
+    "width": 1280.2787316370459,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Misure"
+                    }
+                  },
+                  "Property": "NumberOfEmployers"
+                }
+              },
+              "queryRef": "Misure.NumberOfEmployers",
+              "nativeQueryRef": "NumberOfEmployers"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Misure"
+                    }
+                  },
+                  "Property": "NumberOfMen"
+                }
+              },
+              "queryRef": "Misure.NumberOfMen",
+              "nativeQueryRef": "NumberOfMen"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Misure"
+                    }
+                  },
+                  "Property": "NumberOfWomen"
+                }
+              },
+              "queryRef": "Misure.NumberOfWomen",
+              "nativeQueryRef": "NumberOfWomen"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Misure"
+                  }
+                },
+                "Property": "NumberOfEmployers"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "6575cfa4c2523ed87485",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Misure"
+              }
+            },
+            "Property": "NumberOfEmployers"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ba7311f7645305400d8a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Misure"
+              }
+            },
+            "Property": "NumberOfMen"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9465cf300c661d10e048",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Misure"
+              }
+            },
+            "Property": "NumberOfWomen"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 71.199996948242188,
+        "y": 28.799999237060547
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1105.3391039525982,
+            "y": 219.70258365522932
+          },
+          "nodeIndex": "categories",
+          "nodeLineageTag": "c1eaa2b9-ab49-4d0d-9fed-284d2a868800",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 211.61166556703651,
+            "y": 266.67840721270352
+          },
+          "nodeIndex": "cities",
+          "nodeLineageTag": "6e86e1a6-7bbf-492b-a9e7-82c36dd51c02",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 23.487864687916954
+          },
+          "nodeIndex": "countries",
+          "nodeLineageTag": "bd063e0f-dd37-46b1-94d5-411040cd2a7a",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 426.12415555643639,
+            "y": -50
+          },
+          "nodeIndex": "customers",
+          "nodeLineageTag": "97d11655-ac71-407b-938a-04b1f01bda3d",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 537.33910395259818,
+            "y": 345.40516731045864
+          },
+          "nodeIndex": "employees",
+          "nodeLineageTag": "e0904f01-8e08-4337-98ce-cac7106f0b71",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 821.33910395259818,
+            "y": 135.70258365522932
+          },
+          "nodeIndex": "products",
+          "nodeLineageTag": "a2ce22b9-90be-4c2b-82da-c8b4b0992739",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1110.33907343502,
+            "y": 0
+          },
+          "nodeIndex": "Misure",
+          "nodeLineageTag": "60049237-726c-4a2f-ab3c-0aa2a6fc5d81",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
