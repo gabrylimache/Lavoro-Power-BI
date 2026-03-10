@@ -1,6 +1,10 @@
 table cities
 	lineageTag: 6e86e1a6-7bbf-492b-a9e7-82c36dd51c02
 
+	measure TotalCities = COUNT(cities[CityID])
+		formatString: 0
+		lineageTag: f75a910e-58f2-4c95-82b0-2b78d920c846
+
 	column CityID
 		dataType: int64
 		formatString: 0

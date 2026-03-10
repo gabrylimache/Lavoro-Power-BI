@@ -1,0 +1,74 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "c50e99c845dd9de03004",
+  "position": {
+    "x": 1019.5574465233924,
+    "y": 15.094390190790467,
+    "z": 0,
+    "height": 175.64381312919815,
+    "width": 260.72128511365349,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cities"
+                    }
+                  },
+                  "Property": "TotalCities"
+                }
+              },
+              "queryRef": "cities.Total Cities",
+              "nativeQueryRef": "TotalCities"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "cities"
+                  }
+                },
+                "Property": "TotalCities"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c43b8c14e83de3218061",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "cities"
+              }
+            },
+            "Property": "TotalCities"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

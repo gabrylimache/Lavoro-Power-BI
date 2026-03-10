@@ -1,0 +1,100 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1105.3391039525982,
+            "y": 219.70258365522932
+          },
+          "nodeIndex": "categories",
+          "nodeLineageTag": "c1eaa2b9-ab49-4d0d-9fed-284d2a868800",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 399.59164602712048,
+            "y": 188.62641223725336
+          },
+          "nodeIndex": "cities",
+          "nodeLineageTag": "6e86e1a6-7bbf-492b-a9e7-82c36dd51c02",
+          "size": {
+            "height": 229.55465959507802,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 23.487864687916954
+          },
+          "nodeIndex": "countries",
+          "nodeLineageTag": "bd063e0f-dd37-46b1-94d5-411040cd2a7a",
+          "size": {
+            "height": 185.82399553373347,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 713.628117593171,
+            "y": 36.642661828211288
+          },
+          "nodeIndex": "customers",
+          "nodeLineageTag": "97d11655-ac71-407b-938a-04b1f01bda3d",
+          "size": {
+            "height": 271.91732700612249,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 189.23381658459095,
+            "y": 494.79448091778158
+          },
+          "nodeIndex": "employees",
+          "nodeLineageTag": "e0904f01-8e08-4337-98ce-cac7106f0b71",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 825.56710339431493,
+            "y": 435.89054401711405
+          },
+          "nodeIndex": "products",
+          "nodeLineageTag": "a2ce22b9-90be-4c2b-82da-c8b4b0992739",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 70.95554390096882,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
