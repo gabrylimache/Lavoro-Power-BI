@@ -80,5 +80,51 @@
       }
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "6575cfa4c2523ed87485",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Misure"
+              }
+            },
+            "Property": "NumberOfEmployers"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ba7311f7645305400d8a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Misure"
+              }
+            },
+            "Property": "NumberOfMen"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9465cf300c661d10e048",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Misure"
+              }
+            },
+            "Property": "NumberOfWomen"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
