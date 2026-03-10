@@ -1,0 +1,74 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "5815c6cee473122a1467",
+  "position": {
+    "x": 1000.3464044623863,
+    "y": 0,
+    "z": 0,
+    "height": 279.93232717465958,
+    "width": 279.93232717465958,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "countries"
+                    }
+                  },
+                  "Property": "TotalCountry"
+                }
+              },
+              "queryRef": "countries.TotalCountry",
+              "nativeQueryRef": "TotalCountry"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "countries"
+                  }
+                },
+                "Property": "TotalCountry"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "9c1f3023540140458090",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "countries"
+              }
+            },
+            "Property": "TotalCountry"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
