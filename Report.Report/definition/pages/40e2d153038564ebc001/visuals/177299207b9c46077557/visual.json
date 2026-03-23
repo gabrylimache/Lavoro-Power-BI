@@ -1,0 +1,107 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "177299207b9c46077557",
+  "position": {
+    "x": 0,
+    "y": 217,
+    "z": 1,
+    "height": 154,
+    "width": 1280,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "areaChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "categories"
+                    }
+                  },
+                  "Property": "CategoryName"
+                }
+              },
+              "queryRef": "categories.CategoryName",
+              "nativeQueryRef": "CategoryName",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Misure"
+                    }
+                  },
+                  "Property": "NumberOfEmployers"
+                }
+              },
+              "queryRef": "Misure.NumberOfEmployers",
+              "nativeQueryRef": "NumberOfEmployers"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Misure"
+                  }
+                },
+                "Property": "NumberOfEmployers"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "cb4a5d0899eb4070ae3a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "categories"
+              }
+            },
+            "Property": "CategoryName"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6ecc306286cade230a76",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Misure"
+              }
+            },
+            "Property": "NumberOfEmployers"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
